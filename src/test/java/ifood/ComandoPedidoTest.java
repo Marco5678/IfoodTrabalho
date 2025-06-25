@@ -16,7 +16,7 @@ class ComandoPedidoTest {
     @Test
     void deveExecutarComandoSairParaEntrega() {
         Pedido pedido = new Pedido();
-        pedido.preparar(); // precisa estar preparado antes
+        pedido.preparar();
         ComandoPedido comando = new ComandoSairParaEntrega(pedido);
         comando.executar();
         assertEquals("Saiu para Entrega", pedido.getEstado());
